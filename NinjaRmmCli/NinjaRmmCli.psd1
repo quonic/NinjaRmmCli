@@ -12,7 +12,7 @@
     RootModule        = 'NinjaRmmCli.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.1.0'
+    ModuleVersion     = '0.1.1'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -69,16 +69,16 @@
     # NestedModules = @()
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-    FunctionsToExport = '*'
+    FunctionsToExport = @()
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-    CmdletsToExport   = '*'
+    CmdletsToExport   = "Clear-NinjaDocument", "Get-NinjaDocument", "Get-NinjaDocumentName", "Get-NinjaDocumentOption", "Get-NinjaProperty", "Get-NinjaTemplate", "Set-NinjaDocument", "Set-NinjaProperty"
 
     # Variables to export from this module
-    VariablesToExport = '*'
+    VariablesToExport = @()
 
     # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-    AliasesToExport   = '*'
+    AliasesToExport   = "Ninja-Property-Clear", "Ninja-Property-Docs-Get", "Ninja-Property-Docs-Get-Single", "Ninja-Property-Docs-Names", "Ninja-Property-Options", "Ninja-Property-Get", "Ninja-Property-Docs-Templates", "Ninja-Property-Docs-Set", "Ninja-Property-Docs-Set-Single", "Ninja-Property-Set"
 
     # DSC resources to export from this module
     # DscResourcesToExport = @()
@@ -95,13 +95,13 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            # Tags = @()
+            Tags       = @("NinjaRMM", "NJCliPSh")
 
             # A URL to the license for this module.
-            # LicenseUri = ''
+            LicenseUri = 'https://raw.githubusercontent.com/quonic/NinjaRmmCli/main/LICENSE'
 
             # A URL to the main website for this project.
-            # ProjectUri = ''
+            ProjectUri = 'https://github.com/quonic/NinjaRmmCli'
 
             # A URL to an icon representing this module.
             # IconUri = ''

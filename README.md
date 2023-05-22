@@ -1,6 +1,6 @@
 # NinjaRmmCli
 
-This module demonstrates a sane implimentation of how to interact with ninjarmm-cli.exe on Windows, MacOS, and Linux via PowerShell.
+Module for scripts to interact with the Ninja agent's ninjarmm-cli tool.
 Should work fine under 5.1+. Untested under older versions of PowerShell.
 
 Replaces:
