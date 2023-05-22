@@ -7,7 +7,7 @@ $DistFolder = "Output"
 
 # Setup Build Folders
 if (-not $(Test-Path -Path $(Join-Path -Path $ProjectPath -ChildPath $DistFolder) -ErrorAction SilentlyContinue)) {
-    New-Item -Path $ProjectPath -Name "dist" -ItemType Directory -ErrorAction Stop
+    New-Item -Path $ProjectPath -Name $DistFolder -ItemType Directory -ErrorAction Stop
 }
 
 $PublicCmdlets = [System.Collections.Generic.List[String]]::new()
