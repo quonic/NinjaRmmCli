@@ -33,7 +33,7 @@
     Description       = 'Module for scripts to interact with the Ninja agent''s ninjarmm-cli tool.'
 
     # Minimum version of the Windows PowerShell engine required by this module
-    PowerShellVersion = '2'
+    PowerShellVersion = '2.0'
 
     # Name of the Windows PowerShell host required by this module
     # PowerShellHostName = ''
