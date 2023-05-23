@@ -12,7 +12,7 @@
     RootModule        = 'NinjaRmmCli.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.1.1'
+    ModuleVersion     = '0.1.2'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -33,7 +33,7 @@
     Description       = 'Module for scripts to interact with the Ninja agent''s ninjarmm-cli tool.'
 
     # Minimum version of the Windows PowerShell engine required by this module
-    # PowerShellVersion = ''
+    PowerShellVersion = '2'
 
     # Name of the Windows PowerShell host required by this module
     # PowerShellHostName = ''

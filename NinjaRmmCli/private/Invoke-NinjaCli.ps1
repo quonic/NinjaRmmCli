@@ -7,9 +7,10 @@ function Invoke-NinjaCli {
         $Arguments
     )
     process {
-        $ArgumentsList = [System.Collections.Generic.List[string]]::new()
-        $ArgumentsList.Add("--direct-out")
-        $Arguments | ForEach-Object { $ArgumentsList.Add($_) }
+        $ArgumentsList = $(
+            "--direct-out"
+            $Arguments | ForEach-Object { $_ }
+        )
         if ($PSCmdlet.ShouldProcess("ninjarmm-cli.exe", "Using Parameters ($($ArgumentsList -join ' '))")) {
             $pinfo = New-Object System.Diagnostics.ProcessStartInfo
             $pinfo.FileName = Get-NinjaCli

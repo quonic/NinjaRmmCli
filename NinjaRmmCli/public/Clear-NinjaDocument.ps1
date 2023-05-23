@@ -17,11 +17,12 @@ function Set-NinjaDocument {
         $DocumentName
     )
     process {
-        $Arguments = [System.Collections.Generic.List[string]]::new()
-        $Arguments.Add("org-clear")
-        $Arguments.Add($TemplateId)
-        $Arguments.Add("""$DocumentName""")
-        $Arguments.Add("""$AttributeName""")
+        $Arguments = $(
+            "org-clear"
+            $TemplateId
+            """$DocumentName"""
+            """$AttributeName"""
+        )
         if ($PSCmdlet.ShouldProcess("Invoke-NinjaCli")) {
             Invoke-NinjaCli -Arguments $Arguments
         }

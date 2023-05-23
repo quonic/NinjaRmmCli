@@ -1,7 +1,7 @@
 # NinjaRmmCli
 
 Module for scripts to interact with the Ninja agent's ninjarmm-cli tool.
-Should work fine under 5.1+. Untested under older versions of PowerShell.
+Should be compatible with PowerShell 2.0 and above.
 
 Replaces:
 

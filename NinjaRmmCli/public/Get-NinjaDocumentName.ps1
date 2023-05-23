@@ -7,11 +7,12 @@ function Get-NinjaDocumentName {
         $TemplateId
     )
     process {
-        $Arguments = [System.Collections.Generic.List[string]]::new()
-        $Arguments.Add("documents")
-        if ($Name) {
-            $Arguments.Add($TemplateId)
-        }
+        $Arguments = $(
+            "documents"
+            if ($Name) {
+                $TemplateId
+            }
+        )
         if ($PSCmdlet.ShouldProcess("Invoke-NinjaCli")) {
             Invoke-NinjaCli -Arguments $Arguments
         }

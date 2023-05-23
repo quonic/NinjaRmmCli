@@ -20,18 +20,20 @@ function Set-NinjaDocument {
         $Value
     )
     process {
-        $Arguments = [System.Collections.Generic.List[string]]::new()
-        $Arguments.Add("--direct-out")
-        $Arguments.Add("org-set")
-        if ($DocumentName) {
-            $Arguments.Add($TemplateId)
-            $Arguments.Add("""$DocumentName""")
-        }
-        else {
-            $Arguments.Add("""$TemplateId""")
-        }
-        $Arguments.Add($AttributeName)
-        $Arguments.Add("""$Value""")
+        $Arguments = $(
+            "--direct-out"
+            "org-set"
+            if ($DocumentName) {
+                $TemplateId
+                """$DocumentName"""
+            }
+            else {
+                """$TemplateId"""
+            }
+            $AttributeName
+            """$Value"""
+        )
+        
         if ($PSCmdlet.ShouldProcess("Invoke-NinjaCli")) {
             Invoke-NinjaCli -Arguments $Arguments
         }
